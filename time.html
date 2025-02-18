@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty Timetable</title>
+    <link rel="stylesheet" href="time.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Pydah College Of Engineering</h1>
+        <h2 class="black">College Faculty Timetable</h2>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showDepartment('CSE')">CSE</a></li>
+                <li><a href="#" onclick="showDepartment('ECE')">ECE</a></li>
+                <li><a href="#" onclick="showDepartment('AI')">AI</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="searchBox" placeholder="Search Faculty...">
+        </div>
+    </header>
+
+    <section class="timetable">
+        <h2>Faculty Details:</h2>
+        <table id="facultyTable">
+            <tr>
+                <th>Faculty Name</th>
+                <th>Subject</th>
+                <th>Department</th>
+               
+            </tr>
+
+            <!-- CSE Faculty -->
+            <tr class="CSE">
+                <td onclick="showTimetable('krishna')">Krishna</td>
+                <td>SE</td>
+                <td>HBS</td>
+                
+            </tr>
+            <tr class="CSE">
+                <td onclick="showTimetable('swapna')"> Swapna</td>
+                <td>DBMS</td>
+                <td>HBS</td>
+              
+            </tr>
+            <tr class="CSE">
+                <td onclick="showTimetable('krishna')">Krishna</td>
+                <td>SE</td>
+                <td>HBS</td>
+                
+            </tr>
+            <tr class="CSE">
+                <td onclick="showTimetable('swapna')"> Swapna</td>
+                <td>DBMS</td>
+                <td>HBS</td>
+             
+            </tr>
+            <tr class="CSE">
+                <td onclick="showTimetable('krishna')">Krishna</td>
+                <td>SE</td>
+                <td>ECE</td>
+              
+            </tr>
+            <tr class="CSE">
+                <td onclick="showTimetable('swapna')">Swapna</td>
+                <td>DBMS</td>
+                <td>MEC</td>
+              
+            </tr>
+
+            <!-- ECE Faculty -->
+            <tr class="ECE">
+                <td onclick="showTimetable('arjun')"> Arjun</td>
+                <td>Computer Science</td>
+                <td>AI</td>
+                
+            </tr>
+            <tr class="ECE">
+                <td onclick="showTimetable('arjun')"> Arjun</td>
+                <td>Computer Science</td>
+                <td>ECE</td>
+              
+            </tr><tr class="ECE">
+                <td onclick="showTimetable('arjun')"> Arjun</td>
+                <td>Computer Science</td>
+                <td>AI</td>
+         
+            </tr>
+
+            <!-- AI Faculty -->
+            <tr class="AI">
+                <td onclick="showTimetable('suresh')">Suresh</td>
+                <td>AI & ML</td>
+                <td>AI</td>
+                
+            </tr>
+
+            <tr class="AI">
+                <td onclick="showTimetable('suresh')">Suresh</td>
+                <td>AI & ML</td>
+                <td>ECE</td>
+           
+            </tr>
+
+            <tr class="AI">
+                <td onclick="showTimetable('suresh')">Suresh</td>
+                <td>AI & ML</td>
+                <td>AI</td>
+               
+            </tr>
+
+        </table>
+    </section>
+
+    <!-- Weekly Timetable (Hidden Initially) -->
+    <section id="weeklyTimetable" style="display: none;">
+        <h2 id="facultyName"></h2>
+        <table class="week">
+            <tr>
+                <th>Day</th>
+                <th>Period 1</th>
+                <th>Period 2</th>
+                <th>Period 3</th>
+                <th>Period 4</th>
+                <th>Period 5</th>
+                <th>Period 6</th>
+                <th>Period 7</th>
+             
+            </tr>
+            <tbody id="weeklyData"></tbody>
+        </table>
+        <button id="downloadPDF">Download Timetable as PDF</button>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+    <script src="roy.js"></script>
+
+    <footer>
+        <div class="footer-container">
+           
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Timetable</a></li>
+                
+            </ul>
+          
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://youtube.com" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
